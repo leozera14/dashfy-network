@@ -1,0 +1,70 @@
+.wrap-users {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2em;
+}
+
+.container-users {
+  width: 90%;
+  transition: all 200ms ease-out;
+}
+
+.users:hover {
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.20);
+}
+
+.titles, .users {
+  width: 100%;
+}
+
+.titles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.users {
+  display: flex;
+  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 0;
+}
+
+.users ~ .users {
+  border-top: 1px solid rgba(0,0,0, .1);
+}
+.users image {
+  max-width: 100%;
+  height: auto;
+}
+
+.titles-content, .users-content {
+  width: 20%;
+  height: auto;
+}
+
+.titles-content, .users-content > p {
+  width: 100%;
+  text-align: center;
+}
+
+.titles-content p {
+  font-weight: 500;
+  color: rgb(252,121,71);
+}
+
+.users-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.users-content > img {
+  width: 50px;
+  height: auto;
+}
+
+
