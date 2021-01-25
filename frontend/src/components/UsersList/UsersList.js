@@ -18,7 +18,7 @@ export default function UsersList(props) {
        setTimeout(() => {
         toast.success("Redirecting to User Profile");
         history.push(`/profile/${id}`)
-      }, 2000)
+      }, 500)
     } catch (error) {
       toast.error(`${error}`);
     }

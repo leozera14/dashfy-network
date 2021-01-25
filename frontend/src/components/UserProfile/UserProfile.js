@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaCodepen ,FaUserAlt, FaPhoneAlt } from 'react-icons/fa'
+import { useHistory } from 'react-router-dom'; 
+import { FaCodepen ,FaUserAlt, FaPhoneAlt, FaArrowLeft } from 'react-icons/fa'
 import { HiLocationMarker } from 'react-icons/hi'
 import './user-profile-style.css';
 
@@ -9,11 +10,24 @@ export default function UserProfile(props) {
   const experiences = props.user.experiences || [];
   const proficiencies = props.user.proficiencies || [];
 
+  const history = useHistory();
+
+  async function goHome() {
+    history.push('/');
+  }
+
   return(
     <div className="wrap-user-info">
 
-      <div className="user-info-personal">
+      <div className="back-homepage" onClick={() => goHome()}>
+          < FaArrowLeft 
+          size={20}
+          color={'rgb(252,121,71)'}
+          />
+          <span>Back to Homepage</span>
+      </div>
 
+      <div className="user-info-personal">
         <div className="personal-content avatar">
           <a href={user.avatar} target="_blank" rel="noreferrer">
             <img src={user.avatar} alt={user.name}/>
